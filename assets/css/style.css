@@ -1,0 +1,372 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #1f2933;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+main .content {
+  padding: 20px;
+}
+main .content, main .news-card p {
+	text-align: justify;
+	line-height: 2.5;
+	font-size: 1.3em;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+main .news-card a {
+  text-decoration: none;
+  color: #ee6a1b;
+  font-weight: 500;
+}
+
+main .news-card a:hover {
+  text-decoration: underline;
+}
+
+/* ================= NAV ================= */
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  /* color: white; */
+  color: lightgray;
+  font-weight: 700;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: lightgray;
+  font-weight: 500;
+}
+
+nav a.active {
+  color: #ee6a1b;
+}
+
+nav a:hover {
+  padding-bottom: 5px;
+  border-bottom: solid #ee6a1b 5px;
+}
+
+/* ================= HERO ================= */
+
+.hero-full {
+  position: relative;
+  height: 100vh;
+  background: url("../img/african-scientists.jpg") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  color: #ee6a1b;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn-primary {
+  background: #ee6a1b;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.btn-primary:hover {
+  background: #d85e16;
+}
+
+.btn-secondary {
+  border: 2px solid white;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #1f2933;
+}
+
+/* ================= INTRO SECTION ================= */
+
+.intro {
+  padding: 80px 0;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.intro h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #1f2933;
+  color: lightgray;
+  text-align: center;
+  padding: 20px 0;
+}
+/* footer {
+  background: #1f2933;
+  color: white;
+  padding: 25px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.4rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.6) 40%,
+    rgba(0,0,0,0.4) 70%,
+    rgba(0,0,0,0.3) 100%
+  );
+}
+.hero-content {
+  max-width: 750px;
+  padding: 20px;
+}
+.hero-content p {
+  line-height: 1.8;
+}
+.hero-full {
+  filter: brightness(0.9) contrast(1.05);
+}
+
+.hero-full {
+  background: url("../img/african-scientists.jpg") center center / cover no-repeat;
+  filter: saturate(0.8) brightness(0.85);
+}
+.hero-full {
+  background: linear-gradient(rgba(30,58,138,0.7), rgba(30,58,138,0.7)),
+              url("../img/african-scientists.jpg") center center / cover no-repeat;
+}
+
+/* ===== SOLID HEADER FOR INTERNAL PAGES ===== */
+
+header.solid {
+  position: relative;
+  background: #1f2933;
+}
+
+/* ===== PAGE HERO ===== */
+
+.page-hero {
+  background: linear-gradient(rgba(30,58,138,0.85), rgba(30,58,138,0.85));
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  /* background: #000000bf; */
+  background: maroon;
+  /* color: darkorange; */
+  /* background: #f1f2f8; */
+  /* color: #1f2933; */
+  font-weight: bold;
+  color: #a9a9a9;
+  color: lightgray;
+  /* font-family: "Josefin Sans"; */
+  /* font-family: "Raleway"; */
+  /* font-family: "Poiret One"; */
+}
+
+/* ===== CONTENT ===== */
+
+.content {
+  padding: 80px 0;
+}
+
+.content h2 {
+  margin-top: 40px;
+}
+
+/* ===== TEAM ===== */
+
+/* .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 80px 0;
+}
+
+.team-card {
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 15px;
+} */
+
+/* ===== NEWS ===== */
+
+.news-card {
+  padding: 30px;
+  border: 1px solid #eee;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.date {
+  color: #ee6a1b;
+  font-weight: 600;
+}
+
+/* ===== CONTACT ===== */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* ===== TEAM SECTION ===== */
+
+.team-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 40px;
+  padding: 80px 20px;
+}
+
+.team-card {
+  /* background: #f5f7fa; */
+  background: lightgray;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.team-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10%;
+  margin-bottom: 20px;
+  /* border: 6px solid whites; */
+  padding: 3px;
+  border: 1px solid darkgray;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.team-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #1f2933;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
